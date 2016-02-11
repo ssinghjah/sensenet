@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <meta name="google-site-verification" content="2A_Cf2fEEalPeQiFz_0V1g_G9JIZgfRl5PDyX4Bb6gg" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scheduler.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Sense Net</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#"> Scheduler <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Temperature Monitor</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Help</a></li>
+        <li><a href="#">About Sensenet</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+  <div class ="container">
+  <div class="row paddingBottom">
+    <div class="col-md-12">
+    <label for="emails">
+    </label>
+    <input placeholder="Group Number" title = "Group Number" id="groupId">
+      </input>
+      <label for="emails">
+    </label>
+    <input placeholder="Comma separated Emails" title = "Group Members" id="emailIds">
+      </input>
+      <div class = "btn btn-success"id="schedule-button" onclick="handleScheduleClick(event)">
+        Schedule
+      </div>
+    </div>
+    </div>
+    <div class="row paddingBottom">
+      <div class="col-md-6">
+        <div class = "btn btn-sm btn-primary" onclick="refreshCalendars()">
+          Refresh
+        </div>
+      </div>
+    </div>
+    <div  id = "calendars" class="row">
+      <div class="col-md-6">
+        <iframe id="BBB1Calendar" src="https://calendar.google.com/calendar/embed?src=ncsu.edu_3dviothfpmkijqoli8bpn4s1q4%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="100%" height="100%" frameborder="1" scrolling="yes">
+        </iframe>
+      </div>
+      <div class="col-md-6">
+       <iframe  id="BBB2Calendar"  src="https://calendar.google.com/calendar/embed?src=ncsu.edu_kabpq58p37u5lmr82eiooeohp0%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+      </div>
+  </div>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <meta name="google-site-verification" content="2A_Cf2fEEalPeQiFz_0V1g_G9JIZgfRl5PDyX4Bb6gg" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="jquery.js"></script>
+    <script type="text/javascript">
+
+      function handleScheduleClick(event){
+
+          $.post('/schedule', { emailIds: "s.singh.xyz@gmail.com"}).done(           
+                          function(data) 
+                          {
+                            console.log('success');
+                            console.log(data);
+                        }
+                    );
+      }
+
+    </script>
+  </head>
+  <body>
+  <div class="paddingBottom">
+    <label for="emails">
+    </label>
+    <input placeholder="Enter Email Ids" title = "Email Ids" id="emails">
+      </input>
+    <button id="schedule-button" onclick="handleScheduleClick(event)">
+        Schedule
+      </button>
+  </div>
+    <div>
+    <iframe src="https://calendar.google.com/calendar/embed?src=ncsu.edu_3dviothfpmkijqoli8bpn4s1q4%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="100%" height="100%" frameborder="1" scrolling="yes"></iframe>
+    </div>
+
+  </body>
+</html>
